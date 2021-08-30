@@ -1,0 +1,47 @@
+<!--<ion-header>
+  <ion-navbar color="light">
+    <p id="slidehere">Slide Here  <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward"></ion-icon></p>
+    <p text-center><b>95 Petrol</b></p>
+    <ion-buttons end>
+      <button ion-button round outline style="height:10%" color="dark" (click)="openCommentsPage()"><ion-icon ios="ios-paper" md="md-paper"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>-->
+
+<ion-content text-center>
+  <ion-fab top>
+    <button ion-button full text-center color="dark" style="transform:translate(-50%, -50%); padding-top:30px; margin-top:0; height:60px; width: 180px; border-radius: 0 0 7px 7px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Octane 95 Petrol</button>
+  </ion-fab>
+  <ion-fab top left>
+    <button ion-fab mini menuToggle color="dark" style="color:white">
+      <ion-icon ios="ios-reorder" md="md-reorder"></ion-icon>
+    </button>
+  </ion-fab>
+  <ion-fab top right>
+    <button ion-fab mini color="dark" style="color:white" (click)="openVehiclePage()"><ion-icon ios="ios-car" md="md-car"></ion-icon></button>
+  </ion-fab>
+  <ion-fab bottom right>
+    <button ion-fab mini color="dark" style="color:white" (click)="displayGoogleMap()"><ion-icon ios="ios-locate" md="md-locate"></ion-icon></button>
+  </ion-fab>
+  <ion-fab bottom left>
+    <button ion-fab mini color="dark" style="color:white" (click)="launchByDest()"><ion-icon ios="ios-navigate" md="md-navigate"></ion-icon></button>
+  </ion-fab>
+  <ion-fab top right style="margin-top: 50px;">
+    <button ion-fab mini color="dark" style="color:white"><ion-icon ios="ios-more" md="md-more"></ion-icon></button>
+    <ion-fab-list side="bottom">
+      <button ion-fab (click)="open92Page()" style="background-color:green; color:white; font-weight:bold">92</button>
+      <button ion-fab (click)="openladPage()" style="background-color:deeppink; color:white; font-weight:bold">LAD</button>
+      <button ion-fab (click)="openlsdPage()" style="background-color:cornflowerblue; color:white; font-weight:bold">LSD</button>
+      <button ion-fab (click)="openlkPage()" style="background-color:darkgoldenrod; color:white; font-weight:bold">LK</button>
+    </ion-fab-list>
+  </ion-fab>
+  <div #map id="map" style="height:100%">
+  </div>
+  <ion-list style="display:none">
+    <ion-item>
+      <ion-label floating>Destination</ion-label>
+      <ion-input type="text" [value]="destinationPoint1" [(ngModel)]="destinationPoint1"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

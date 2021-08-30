@@ -1,0 +1,72 @@
+<ion-content>
+    <div class="cover">
+      <img src="../../assets/imgs/filtercover.jpg" alt="" />
+    </div>
+    <div class="proc">
+      <ion-card>
+        <ion-card-header style="color:blue">
+          Explore Nearby
+        </ion-card-header>
+
+        <ion-list style="color: black">
+          <ion-chip (click)="open95Page()" style="width: 100%">
+            <ion-icon name="pin" color="secondary"></ion-icon>
+            <ion-label style="font-size: 15px; font-weight: bold">Octane 95 Petrol (95)</ion-label>
+          </ion-chip>
+
+          <ion-chip (click)="open92Page()" style="width: 100%">
+            <ion-icon name="pin" color="secondary"></ion-icon>
+            <ion-label style="font-size: 15px; font-weight: bold">Octane 92 Petrol (92)</ion-label>
+          </ion-chip>
+
+          <ion-chip (click)="openladPage()" style="width: 100%">
+            <ion-icon name="pin" color="secondary"></ion-icon>
+            <ion-label style="font-size: 15px; font-weight: bold">Lanka Auto Diesel (LAD)</ion-label>
+          </ion-chip>
+
+          <ion-chip (click)="openlsdPage()" style="width: 100%">
+            <ion-icon name="pin" color="secondary"></ion-icon>
+            <ion-label style="font-size: 15px; font-weight: bold">Lanka Super Diesel (LSD)</ion-label>
+          </ion-chip>
+
+          <ion-chip (click)="openlkPage()" style="width: 100%">
+            <ion-icon name="pin" color="secondary"></ion-icon>
+            <ion-label style="font-size: 15px; font-weight: bold">Lanka Kerosene (LK)</ion-label>
+          </ion-chip>
+
+        </ion-list>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header style="color:blue">
+          Other Options
+        </ion-card-header>
+
+        <ion-list style="color: black">
+          <button ion-item (click)="showToast('middle')">
+            <ion-icon ios="ios-water" md="md-water"></ion-icon>
+            Sheds with Air Facilities
+          </button>
+
+          <button ion-item (click)="showToast('middle')">
+            <ion-icon ios="ios-cart" md="md-cart"></ion-icon>
+            Sheds with Super Market
+          </button>
+
+          <button ion-item (click)="showToast('middle')">
+            <ion-icon ios="ios-card" md="md-card"></ion-icon>
+            Sheds with ATMs
+          </button>
+
+          <button ion-item (click)="showToast('middle')">
+            <ion-icon ios="ios-woman" md="md-woman"></ion-icon><ion-icon ios="ios-man" md="md-man"></ion-icon>
+            Sheds with Toilets
+          </button>
+
+        </ion-list>
+      </ion-card>
+    </div>
+</ion-content>
+<ion-footer class="bar bar-footer" text-center>
+  <p>Copyright © by the <a href="www.cpstl.lk" style="text-decoration:none; color: aqua; font-weight:bold">CPSTL</a>, IS Function 2018<br>All Rights Reserved</p>
+</ion-footer>

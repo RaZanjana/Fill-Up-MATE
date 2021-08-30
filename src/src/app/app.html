@@ -1,0 +1,45 @@
+<!--<ion-menu [content]="content">
+  <ion-content class="bg">
+    <div class="logo">
+      <div class="logo-img">
+        <img src="../assets/imgs/gYX0OqlnSB2IL87CbNvY_ica-slidebox-img-4.png" />
+        <p>FILL-UP MATE</p>
+      </div>
+    </div>
+    <ion-list no-lines>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon [name]="p.icon"></ion-icon>
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+  <ion-footer class="bar bar-footer" text-center>
+    <p>Copyright © by the <a href="www.cpstl.lk" style="text-decoration:none; color: aqua; font-weight:bold">CPSTL</a>, IS Function 2018<br>All Rights Reserved</p>
+  </ion-footer>
+</ion-menu>-->
+
+<ion-menu [content]="content" id="menu-material">
+  <ion-content>
+    <div class="menu-header">
+      <!--material-design-background-->
+      <img class="user-avatar round" style="height:90px;max-width:90px;" [src]="chosenPicture || placeholder" onerror="this.src='../assets/imgs/gYX0OqlnSB2IL87CbNvY_ica-slidebox-img-4.png'" />
+      <p class="name">FILL-UP MATE</p>
+      <p class="e-mail">ccu@ceypetco.gov.lk</p>
+    </div>
+    <ion-list no-lines style="margin-top: 30px">
+      <button menuClose="left" ion-item detail-none *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon [name]="p.icon" item-left></ion-icon>
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+  <ion-footer class="bar bar-footer" text-center>
+    <p>Copyright © by the <a href="www.cpstl.lk" style="text-decoration:none; color: aqua; font-weight:bold">CPSTL</a>, IS Function 2018<br>All Rights Reserved</p>
+  </ion-footer>
+</ion-menu>
+
+<div *ngIf="showSplash" class="splash">
+  <div class="spinner"></div>
+</div>
+
+<ion-nav [root]="rootPage" type="overlay" #content swipBackEnabled="false"></ion-nav>

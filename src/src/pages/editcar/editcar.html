@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Edit Car</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="update()">
+    <ion-item>
+      <ion-label>Vehicle Type</ion-label>
+      <ion-select [(ngModel)]="data.vtype" name="vtype">
+        <ion-option value="Scooter">Scooter</ion-option>
+        <ion-option value="MorterBike">Morter Bike</ion-option>
+        <ion-option value="ThreeWheel">Three Wheel</ion-option>
+        <ion-option value="Car">Car</ion-option>
+        <ion-option value="Jeep">Jeep/Suv</ion-option>
+        <ion-option value="Van">Van</ion-option>
+        <ion-option value="Cab">Cab</ion-option>
+        <ion-option value="Bus">Bus</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fuel Type</ion-label>
+      <ion-select [(ngModel)]="data.ftype" name="ftype">
+        <ion-option value="95Petrol">95 Octane Petrol</ion-option>
+        <ion-option value="92Petrol">92 Octane Petrol</ion-option>
+        <ion-option value="LSD">Super Diesel</ion-option>
+        <ion-option value="LAD">Auto Diesel</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Description</ion-label>
+      <ion-input typeof="text" [(ngModel)]="data.description" name="description"></ion-input>
+    </ion-item>
+
+    <button ion-button type="submit" block color="secondary">Update</button>
+  </form>
+</ion-content>

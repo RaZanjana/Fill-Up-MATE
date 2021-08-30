@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      ADD YOUR VEHICLE!
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addCar()">
+        <ion-icon ios="ios-add-circle" md="md-add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="refresh()">
+        <ion-icon ios="ios-refresh-circle" md="md-refresh-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-card>
+    <ion-card-header>My Vehicles</ion-card-header>
+    <ion-card-content>
+
+
+      
+
+      <ion-list>
+        <ion-item-sliding #item *ngFor="let vehicle of data">
+          <ion-item (click)="map()">
+            <ion-avatar item-start>
+              <img src="assets/imgs/vehicle.jpg">
+            </ion-avatar>
+            <h2>{{vehicle.vtype}}</h2>
+            <h3 id="fueltype">{{vehicle.ftype}}</h3>
+            <p>{{vehicle.description}}</p>
+            <p>
+              {{vehicle.id}}
+            </p>
+          </ion-item>
+          <ion-item-options side="left">
+            <button ion-button (click)="editCar(vehicle.id, vehicle.vtype, vehicle.ftype, vehicle.description)">Edit</button>
+            <button ion-button color="danger" (click)="share(item)">Share</button>
+          </ion-item-options>
+
+          <ion-item-options side="right">
+            <button ion-button (click)="deleteCar(vehicle.id)">Delete</button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer class="bar bar-footer" text-center>
+  <p>Copyright © by the <a href="www.cpstl.lk" style="text-decoration:none; color: aqua; font-weight:bold">CPSTL</a>, IS Function 2018<br>All Rights Reserved</p>
+</ion-footer>
+
+
+
+
+

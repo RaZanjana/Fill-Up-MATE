@@ -1,0 +1,27 @@
+page-filter {
+  .cover {
+    height: 30%;
+    width: 100%;
+  }
+
+  .proc {
+    height: 70%;
+    width: 100%;
+  }
+
+  ion-list button {
+    color: black !important;
+    background-color: transparent !important;
+  }
+
+  .bar-footer {
+    height: 50px;
+    background-color: darkgrey;
+    border: 0;
+  }
+
+  .bar-footer p {
+    color: #fff;
+    font-size: 10px;
+  }
+}
